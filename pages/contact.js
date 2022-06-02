@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React, { Fragment } from 'react';
-import ContactForm from '../components/contact/contact-form.js';
+import ContactForm from '/components/contact/contact-form.js';
 
 const ContactPage = () => {
   return (

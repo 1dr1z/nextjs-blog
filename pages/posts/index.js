@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React, { Fragment } from 'react';
-import AllPosts from '../../components/posts/all-posts.js';
-import { getAllPosts } from '../../lib/posts-util.js';
+import AllPosts from '/components/posts/all-posts.js';
+import { getAllPosts } from '/lib/posts-util.js';
 
 const AllPostsPage = (props) => {
   return (

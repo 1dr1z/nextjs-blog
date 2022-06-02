@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
-import PostContent from '../../components/posts/post-detail/post-content.js';
-import { getPostData, getPostsFiles } from '../../lib/posts-util.js';
+import PostContent from '/components/posts/post-detail/post-content.js';
+import { getPostData, getPostsFiles } from '/lib/posts-util.js';
 const PostDetailPage = (props) => {
   console.log(process.env.mongodb_username);
   return (
