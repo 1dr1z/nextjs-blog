@@ -3,6 +3,7 @@ import React from 'react';
 import PostContent from '../../components/posts/post-detail/post-content.js';
 import { getPostData, getPostsFiles } from '../../lib/posts-util.js';
 const PostDetailPage = (props) => {
+  console.log(process.env.mongodb_username);
   return (
     <article>
       <Head>
@@ -30,9 +31,7 @@ export const getStaticProps = (context) => {
 
 export const getStaticPaths = () => {
   const postFilenames = getPostsFiles();
-  const slugs = postFilenames.map((fileName) =>
-    fileName.replace((/\.md$/, ''))
-  );
+  const slugs = postFilenames.map((fileName) => fileName.replace(/\.md$/, ''));
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug } })),
     fallback: 'blocking',

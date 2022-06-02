@@ -23,9 +23,7 @@ const handler = async (req, res) => {
     };
     let client;
     try {
-      client = await MongoClient.connect(
-        'mongodb+srv://idriz:root@cluster0.4cdug.mongodb.net/my-site?retryWrites=true&w=majority'
-      );
+      client = await MongoClient.connect(process.env.mongodb_url);
     } catch (error) {
       res.status(500).json({ message: 'Could not connect to database.' });
       return;
